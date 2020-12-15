@@ -30,6 +30,10 @@ function hideVideo(div, video_id) {
 chart js
 https://www.chartjs.org/
 */
+
+const xmin = moment('2003-01-01', "YYYY-MM-DD");
+const xmax = moment('2021-06-01', "YYYY-MM-DD");
+
 const dates0 = new Array; // array of dates0
 const times0 = new Array; // array of times0
 const players0 = new Array; // array of player names
@@ -77,6 +81,8 @@ var last_date4;
 
 Chart.defaults.global.pointHitDetectionRadius = 1;
 Chart.defaults.global.defaultFontFamily = 'Koholint';
+Chart.defaults.global.defaultFontSize = 14;
+Chart.defaults.global.defaultFontColor = '#303030';
 
 // get data from csv
 async function getData0() {
@@ -319,6 +325,10 @@ async function chart() {
             displayFormats: {
               year: 'YYYY'
             }
+          },
+          ticks: {
+            min: first_date,
+            max: last_date,
           }
         }],
         yAxes: [{
@@ -350,8 +360,40 @@ async function chart() {
               enabled: true,
               backgroundColor: 'rgba(0, 0, 0, 0.8)',
               position: 'top',
-              content: 'SRM / ACE',
+              content: 'Arbitrary Code Execution',
+              yAdjust: 30,
+            }
+          },
+          {
+            type: 'line',
+            mode: 'vertical',
+            scaleID: 'x-axis-0',
+            value: dates0[93],
+            borderColor: '#6C7339',
+            borderDash: [10, 10],
+            borderWidth: 2,
+            label: {
+              enabled: true,
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              position: 'top',
+              content: 'Get Item Delay',
               yAdjust: 55,
+            }
+          },
+          {
+            type: 'line',
+            mode: 'vertical',
+            scaleID: 'x-axis-0',
+            value: dates0[111],
+            borderColor: '#6C7339',
+            borderDash: [10, 10],
+            borderWidth: 2,
+            label: {
+              enabled: true,
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              position: 'top',
+              content: 'Void Warp',
+              yAdjust: 30,
             }
           },
           {
@@ -366,7 +408,23 @@ async function chart() {
               enabled: true,
               backgroundColor: 'rgba(0, 0, 0, 0.8)',
               position: 'top',
-              content: 'Optimized RBA Route',
+              content: 'Wrong Warp',
+              yAdjust: 5,
+            }
+          },
+          {
+            type: 'line',
+            mode: 'vertical',
+            scaleID: 'x-axis-0',
+            value: dates0[162],
+            borderColor: '#6C7339',
+            borderDash: [10, 10],
+            borderWidth: 2,
+            label: {
+              enabled: true,
+              backgroundColor: 'rgba(0, 0, 0, 0.8)',
+              position: 'top',
+              content: 'Door of Time Skip',
               yAdjust: 30,
             }
           },
@@ -374,7 +432,7 @@ async function chart() {
             type: 'line',
             mode: 'vertical',
             scaleID: 'x-axis-0',
-            value: dates0[163],
+            value: dates0[164],
             borderColor: '#6C7339',
             borderDash: [10, 10],
             borderWidth: 2,
@@ -386,7 +444,6 @@ async function chart() {
               yAdjust: 55,
             }
           },
-
           {
             type: 'line',
             mode: 'vertical',
