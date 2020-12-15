@@ -1,0 +1,67 @@
+/* YouTube Responsive
+https://codepen.io/darcyvoutt/pen/MaamWg */
+.lightbox {
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 0;
+
+  &-container {
+    position: relative;
+    margin: 0 auto;
+    z-index: 10;
+
+    // Increasing top margin for mobile
+    @media screen and (max-width: 768px) { margin-top: 10%; }
+    @media screen and (max-width: 414px) { margin-top: 13%; }
+  }
+
+  &-content {
+
+  }
+
+  &-close {
+    text-transform: uppercase;
+    background: transparent;
+    position: absolute;
+    font-weight: 300;
+    font-size: 12px;
+    display: block;
+    border: none;
+    color: white;
+    top: -22px;
+    right: 3%;
+  }
+}
+
+.video-container {
+    overflow: hidden;
+    height: auto;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    height: 80vh;
+    width: 80vw;
+    margin: 0 auto;
+    left: 50%;
+    top: 50%;
+    border: 5px #000 solid;
+}
+
+#player_version {
+  padding: 5px;
+  font-family: 'Roboto', sans-serif;
+  margin-top: -15px;
+  font-size: 18px;
+  text-align:right;
+  color: #FFF;
+}

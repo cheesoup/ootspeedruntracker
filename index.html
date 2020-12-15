@@ -1,0 +1,88 @@
+<html>
+<head>
+  <title>The Legend of Zelda: Ocarina of Time - History of World Record Speedruns</title>
+  <meta charset="ISO-8859-1">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/lightbox.css">
+  <link rel="stylesheet" href="styles/chart.css">
+  <!-- Lato typeface -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <!-- dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/moment.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script>
+  <!-- chartjs & plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js"></script>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <style>
+    @font-face {
+      font-family: Hylia;
+      src: url("fonts/HyliaSerifBeta-Regular.otf") format("opentype");
+    }
+
+    @font-face {
+      font-family: Koholint;
+      src: url("fonts/ZeldaDXTTBRK.ttf") format("opentype");
+    }
+  </style>
+</head>
+
+<body>
+  <script src="ootwr_graph.js"></script>
+  <!-- Chart HTML -->
+  <div class="centered" id="wrap">
+    <canvas id="myChart"></canvas>
+    <div id="header">
+      <h1>The Legend of Zelda: Ocarina of Time</h1>
+      <h2>Speedrunning History</h2>
+    </div>
+    <div id="navi">
+      <img src="navi.png" alt="navi" width="70px" onclick="toggle()"/></img>
+      <p id="navi_title">Hey!!!!<br/>Listen!</p>
+    </div>
+  </div>
+  <!-- Chart HTML End -->
+  <!-- Navi HTML Start -->
+  <div id="help" onclick="toggle()">
+    <div id="help_wrap">
+      <div class="help_element">
+        <h4>HEY!! LISTEN!!</h4>
+        <p>Over the years, The Legend of Zelda: Ocarina of Time has had a storied history with speedrunners. It is amongst the most popular speedrun games in the world due to it's plethora of intricate tricks, glitches and exploits. Through constant pushing of the game engine by an extremely dedicated community, what was once an almost 7 hours speedrun, can now be completed in less than 8 minutes.</p>
+        <p>This webpage is a visualized history of the world record speedrun times for the video game ‘The Legend of Zelda: Ocarina of Time’. The data is based on a community run spreadsheet which can be <a href="https://docs.google.com/spreadsheets/d/1DgefbvS3X4geDxfwdE-K6CnGvNcDwZSmiZz_u2KGDcI/edit#gid=0">found here</a>. While some records may have video links, many were lost in age.</p>
+        <p>To the right are glossary of terms used within the graphic.</p>
+        <p>Webpage created by Christopher Carin and Giuliana Ghansiam.</p>
+      </div>
+      <div class="help_element">
+        <h4>Speedrun Categories</h4>
+        <ul>
+          <li><b>Any%</b> - Get to the end by any in-game means.</li>
+          <li><b>100%</b> - Complete 100% of the game and reach the end.</li>
+          <li><b>MST</b> - Complete the Child Dungeons, Temples, and Ganondorf's Castle Trials and get to the end.</li>
+          <li><b>All Dungeons</b> - Complete all dungeons and get to the end.</li>
+          <li><b>Glitchless Any%</b> - Get to the end without using any glitches.</li>
+        </ul>
+        <h4>Major Glitches/Sequence Breaks</h4>
+        <ul>
+          <li><b>RBA</b> - Stands for Reverse Bottle Adventure. It is glitch where by placing a bottle item on B allows us to write the internal item value of a set of bottles outside the space reserved for the inventory.</li>
+          <li><b>SRM / ACE </b> - Stands for Stale Reference Munipulation / Arbirary Code Execution. It is glitch which allows the player to inject arbitrary code into the game engine.</li>
+        </ul>
+      </div>
+  </div>
+  </div>
+  <!-- Navi HTML End -->
+  <!-- Lightbox HTML -->
+  <div id="video" class="lightbox" onclick="hideVideo('video','youtube')">
+    <div class="lightbox-container">
+      <div class="video-container">
+        <iframe id="youtube" width="720px" height="480px" frameborder="0" allowfullscreen></iframe>
+        <h3 id="player_version"></h3>
+      </div>
+    </div>
+  </div>
+  <!-- Lightbox HTML end -->
+</body>
+
+</html>
